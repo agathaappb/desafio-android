@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.picpay.desafio.android.R
-import com.picpay.desafio.android.RecyclerViewInfo
 import com.picpay.desafio.android.data.UserListDiffCallback
 import com.picpay.desafio.android.presenter.viewholder.UserListItemViewHolder
 import com.picpay.desafio.android.data.model.User

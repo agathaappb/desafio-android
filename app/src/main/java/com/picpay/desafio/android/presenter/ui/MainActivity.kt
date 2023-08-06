@@ -16,10 +16,12 @@ import com.picpay.desafio.android.data.service.PicPayService
 import com.picpay.desafio.android.data.model.User
 import com.picpay.desafio.android.data.service.ImpPicPayService
 import com.picpay.desafio.android.presenter.viewmodel.UserViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     private lateinit var recyclerView: RecyclerView
@@ -29,8 +31,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     override fun onResume() {
         super.onResume()
-
-
 
     }
 
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
         userViewModel = ViewModelProvider(this)[UserViewModel::class.java]
 
-        userViewModel.getResponseUser(this.applicationContext)
+        userViewModel.getResponseUser()
 
         userViewModel.responseUsers.observe(this, Observer {
             progressBar.visibility = View.GONE

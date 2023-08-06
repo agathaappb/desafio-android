@@ -1,14 +1,17 @@
-package com.picpay.desafio.android.data.repository
+package com.picpay.desafio.android.presenter.repository
 
-import com.picpay.desafio.android.UserListener
+import com.picpay.desafio.android.data.UserListener
 import com.picpay.desafio.android.data.model.User
 import com.picpay.desafio.android.data.service.ImpPicPayService
 import com.picpay.desafio.android.data.service.PicPayService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class RemoteRepository {
+@Singleton
+class RemoteRepository @Inject constructor(){
 
     fun getListUsers(listener: UserListener){
 
