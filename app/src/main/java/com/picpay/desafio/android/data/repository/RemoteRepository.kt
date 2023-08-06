@@ -1,9 +1,5 @@
-package com.picpay.desafio.android.domain
+package com.picpay.desafio.android.data.repository
 
-import android.view.View
-import android.widget.Toast
-import androidx.lifecycle.MutableLiveData
-import com.picpay.desafio.android.R
 import com.picpay.desafio.android.UserListener
 import com.picpay.desafio.android.data.model.User
 import com.picpay.desafio.android.data.service.ImpPicPayService
@@ -12,7 +8,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class UsersRepository {
+class RemoteRepository {
 
     fun getListUsers(listener: UserListener){
 

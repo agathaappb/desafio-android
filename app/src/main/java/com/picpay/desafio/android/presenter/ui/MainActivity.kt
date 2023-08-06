@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
         userViewModel = ViewModelProvider(this)[UserViewModel::class.java]
 
-        userViewModel.getResponseUser()
+        userViewModel.getResponseUser(this.applicationContext)
 
         userViewModel.responseUsers.observe(this, Observer {
             progressBar.visibility = View.GONE
