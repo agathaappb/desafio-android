@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.picpay.desafio.android.R
+import com.picpay.desafio.android.RecyclerViewInfo
 import com.picpay.desafio.android.data.UserListDiffCallback
 import com.picpay.desafio.android.presenter.viewholder.UserListItemViewHolder
 import com.picpay.desafio.android.data.model.User
@@ -32,6 +33,7 @@ class UserListAdapter : RecyclerView.Adapter<UserListItemViewHolder>() {
 
     override fun onBindViewHolder(holder: UserListItemViewHolder, position: Int) {
         holder.bind(users[position])
+
     }
 
     override fun getItemCount(): Int = users.size

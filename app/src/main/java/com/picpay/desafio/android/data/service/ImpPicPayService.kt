@@ -1,13 +1,11 @@
-package com.picpay.desafio.android.data.network
+package com.picpay.desafio.android.data.service
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.picpay.desafio.android.data.service.PicPayService
 import com.picpay.desafio.android.utils.Constants
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 
 
 class ImpPicPayService {
@@ -27,7 +25,7 @@ class ImpPicPayService {
             .build()
     }
 
-    fun<T> createervice(service: Class<T>):T{
+    fun<T> createService(service: Class<T>):T{
         return retrofit.create(service)
     }
 }
