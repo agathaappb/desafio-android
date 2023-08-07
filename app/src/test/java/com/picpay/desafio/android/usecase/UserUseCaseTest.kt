@@ -2,14 +2,11 @@ package com.picpay.desafio.android.usecase
 
 
 import com.nhaarman.mockitokotlin2.mock
-import com.nhaarman.mockitokotlin2.times
-import com.nhaarman.mockitokotlin2.verify
 import com.picpay.desafio.android.data.ConverterObject
 import com.picpay.desafio.android.data.dao.UserDao
 import com.picpay.desafio.android.data.model.User
 import com.picpay.desafio.android.presenter.repository.LocalRepository
 import com.picpay.desafio.android.presenter.repository.RemoteRepository
-import com.picpay.desafio.android.presenter.repository.RemoteRepositoryTest
 import org.junit.Assert
 
 import org.junit.Test
@@ -38,7 +35,7 @@ class UserUseCaseTest {
 
         Mockito.`when`(mockLocalRepository.getAll()).thenReturn(ConverterObject().dataRemoteFormatterDataBaseFormat(data))
 
-        val newData = mockUserUseCase.userData()
+        val newData = mockUserUseCase.localDataUser()
 
         Assert.assertEquals(data, newData)
     }

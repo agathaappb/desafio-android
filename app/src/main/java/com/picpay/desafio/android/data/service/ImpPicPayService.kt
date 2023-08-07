@@ -12,7 +12,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
-
 class ImpPicPayService {
 
     private val gson: Gson by lazy { GsonBuilder().create() }
@@ -30,7 +29,7 @@ class ImpPicPayService {
             .build()
     }
 
-    fun<T> createService(service: Class<T>):T{
+    fun <T> createService(service: Class<T>): T {
         return retrofit.create(service)
     }
 }

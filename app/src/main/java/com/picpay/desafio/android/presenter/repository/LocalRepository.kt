@@ -5,8 +5,6 @@ import com.picpay.desafio.android.data.dao.UserDao
 import com.picpay.desafio.android.data.entities.UsersLocal
 import com.picpay.desafio.android.data.model.User
 import javax.inject.Inject
-import javax.inject.Singleton
-
 
 class LocalRepository @Inject constructor(
     private val userDataBase: UserDao
@@ -17,5 +15,4 @@ class LocalRepository @Inject constructor(
     }
 
     fun getAll(): List<UsersLocal> = userDataBase.getAll()
-
 }

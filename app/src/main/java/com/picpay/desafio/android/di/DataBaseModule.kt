@@ -20,7 +20,7 @@ class DataBaseModule {
     }
 
     @Provides
-    fun providerDAO(userDataBase: UserDataBase): UserDao{
+    fun providerDAO(userDataBase: UserDataBase): UserDao {
         return userDataBase.userDao()
     }
 }
