@@ -4,6 +4,9 @@ import com.picpay.desafio.android.data.UserListener
 import com.picpay.desafio.android.data.model.User
 import com.picpay.desafio.android.data.service.ImpPicPayService
 import com.picpay.desafio.android.data.service.PicPayService
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -14,7 +17,6 @@ import javax.inject.Singleton
 class RemoteRepository @Inject constructor(){
 
     fun getListUsers(listener: UserListener){
-
 
         val service = ImpPicPayService().createService(PicPayService::class.java)
         val callService = service.getUsers()
@@ -33,7 +35,6 @@ class RemoteRepository @Inject constructor(){
 
             }
         })
-
-
     }
+
 }

@@ -16,7 +16,7 @@ interface UserDao {
     fun getAll():List<UsersLocal>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(user: UsersLocal)
+    fun insert(user: List<UsersLocal>)
 
 
 }

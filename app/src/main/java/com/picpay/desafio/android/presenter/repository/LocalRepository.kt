@@ -1,5 +1,6 @@
 package com.picpay.desafio.android.presenter.repository
 
+import com.picpay.desafio.android.data.ConverterObject
 import com.picpay.desafio.android.data.dao.UserDao
 import com.picpay.desafio.android.data.entities.UsersLocal
 import com.picpay.desafio.android.data.model.User
@@ -13,13 +14,9 @@ class LocalRepository @Inject constructor(
 ) {
 
     fun insert(users: List<User>) {
-        for (user in users) {
-            userDataBase.insert(UsersLocal(user.id, user.name, user.username, user.img))
-        }
+        userDataBase.insert(ConverterObject().dataRemoteFormatterDataBaseFormat(users))
     }
 
-
     fun getAll(): List<UsersLocal> = userDataBase.getAll()
-
 
 }

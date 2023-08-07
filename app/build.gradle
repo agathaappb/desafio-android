@@ -45,6 +45,10 @@ android {
         correctErrorTypes true
     }
 
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
 }
 
 dependencies {
@@ -56,6 +60,7 @@ dependencies {
 
     implementation "androidx.appcompat:appcompat:$appcompat_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
+    implementation "androidx.recyclerview:recyclerview:1.2.0-alpha02"
 
     implementation "com.google.android.material:material:$material_version"
 
