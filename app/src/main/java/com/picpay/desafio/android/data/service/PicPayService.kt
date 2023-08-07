@@ -9,4 +9,6 @@ interface PicPayService {
 
     @GET("users")
     fun getUsers(): Call<List<User>>
+    @GET("users")
+    suspend fun getUserCorroutine(): List<User>
 }

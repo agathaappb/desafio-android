@@ -31,10 +31,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     override fun onResume() {
         super.onResume()
-        userViewModel.responseUsers.observe(this, Observer {
-            progressBar.visibility = View.GONE
-            adapter.users = it
-        })
+
 
     }
 
@@ -55,6 +52,14 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         userViewModel = ViewModelProvider(this)[UserViewModel::class.java]
 
         userViewModel.getResponseUser()
+
+        userViewModel.responseUsers.observe(this, Observer {
+            if (it.isNotEmpty()){
+                progressBar.visibility = View.GONE
+                adapter.users = it
+            }
+        })
+
 
         /*val service = ImpPicPayService().createService(PicPayService::class.java)
         val callService = service.getUsers()

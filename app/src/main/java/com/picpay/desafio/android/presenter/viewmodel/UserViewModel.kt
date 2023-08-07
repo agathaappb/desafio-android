@@ -25,9 +25,24 @@ class UserViewModel @Inject constructor(val useCase: UserUseCase): ViewModel() {
     val responseUsers: LiveData<List<User>> = _responseUsers
 
     fun getResponseUser(){
-        _responseUsers.value = useCase.verifyCache()
+        viewModelScope.launch {
+            _responseUsers.value = useCase.remoteDataUser()
+        }
+    }
+
+    fun remote(){
 
 
+       /* remote.getListUsers(object : UserListener{
+            override fun onSucessResponse(response: List<User>) {
+                _responseUsers.value = response
+            }
+
+            override fun onFailureResponse(message: String) {
+                TODO("Not yet implemented")
+            }
+
+        })*/
     }
 
 }

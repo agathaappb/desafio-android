@@ -8,7 +8,6 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 
-@Singleton
 class LocalRepository @Inject constructor(
     private val userDataBase: UserDao
 ) {

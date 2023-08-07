@@ -13,7 +13,6 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 @Module
 class DataBaseModule {
-
     @Singleton
     @Provides
     fun provideUserDataBase(@ApplicationContext context: Context): UserDataBase {
