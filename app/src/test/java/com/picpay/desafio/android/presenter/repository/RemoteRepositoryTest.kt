@@ -5,6 +5,7 @@ import com.picpay.desafio.android.data.model.User
 import com.picpay.desafio.android.data.service.PicPayService
 
 import kotlinx.coroutines.test.runBlockingTest
+import kotlinx.coroutines.test.runTest
 
 import org.junit.Assert.*
 
@@ -21,11 +22,11 @@ class RemoteRepositoryTest() {
     )
 
     @Test
-    fun getListUsers()= runBlockingTest{
+    fun getListUsers()= runTest{
 
         val mockService = mock<PicPayService>()
 
-        Mockito.`when`(mockService.getUser()).thenReturn(dataFormatUser)
+       // Mockito.`when`(mockService.getUser()).thenReturn(dataFormatUser)
 
         val data = mockService.getUser()
 

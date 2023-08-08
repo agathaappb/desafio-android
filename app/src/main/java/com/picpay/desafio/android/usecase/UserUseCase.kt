@@ -17,30 +17,29 @@ class UserUseCase @Inject constructor(
     private val localRepository: LocalRepository,
     private val remoteRepository: RemoteRepository,
     private val defaultDispatcher: Dispatchers
-){
+) {
 
-    suspend fun getUsers():List<User>{
+    suspend fun getUsers(): List<User> {
         return withContext(defaultDispatcher.Default) {
             val cache = localDataUser()
 
-            if (cache.isEmpty()){
+            if (cache.isEmpty()) {
                 return@withContext remoteDataUser()
-            }else{
+            } else {
                 return@withContext cache
             }
         }
     }
 
-    suspend fun remoteDataUser():List<User>{
+    suspend fun remoteDataUser(): List<User> {
         return withContext(defaultDispatcher.Default) {
-           var dataUser = remoteRepository.getListUser()
+            var dataUser = remoteRepository.getListUser()
             localRepository.insert(dataUser)
             return@withContext dataUser
         }
     }
 
-    fun localDataUser():List<User>{
+    fun localDataUser(): List<User> {
         return ConverterObject().dataLocalFormatterDataRemoteFormat(localRepository.getAll())
     }
-
 }

@@ -10,9 +10,9 @@ data class UsersLocal(
     @PrimaryKey(autoGenerate = false)
     val id: Int,
     @ColumnInfo(name = "name")
-    val name:String,
-    @ColumnInfo(name="username")
-    val username:String,
-    @ColumnInfo(name="img")
-    val img:String
+    val name: String,
+    @ColumnInfo(name = "username")
+    val username: String,
+    @ColumnInfo(name = "img")
+    val img: String
 )

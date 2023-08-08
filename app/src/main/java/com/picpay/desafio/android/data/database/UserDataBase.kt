@@ -8,7 +8,7 @@ import com.picpay.desafio.android.data.dao.UserDao
 import com.picpay.desafio.android.data.entities.UsersLocal
 import com.picpay.desafio.android.utils.Constants
 
-@Database(entities = [UsersLocal::class], version = 1)
+@Database(entities = [UsersLocal::class], version = Constants.DataBase.VERSION)
 abstract class UserDataBase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
@@ -29,9 +29,7 @@ abstract class UserDataBase : RoomDatabase() {
                         .build()
                 }
             }
-
             return INSTANCE
         }
     }
-
 }
