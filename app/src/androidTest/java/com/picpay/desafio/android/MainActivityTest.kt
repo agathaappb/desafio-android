@@ -2,16 +2,22 @@ package com.picpay.desafio.android
 
 import androidx.lifecycle.Lifecycle
 import androidx.test.core.app.launchActivity
+import androidx.test.espresso.Espresso.onData
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.platform.app.InstrumentationRegistry
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import com.picpay.desafio.android.data.model.User
+import com.picpay.desafio.android.presenter.ui.MainActivity
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
 import okhttp3.mockwebserver.RecordedRequest
 import org.junit.Test
+import java.util.regex.Matcher
 
 
 class MainActivityTest {
@@ -46,6 +52,13 @@ class MainActivityTest {
 
         launchActivity<MainActivity>().apply {
             // TODO("validate if list displays items returned by server")
+            val responseData = successResponse.getBody().toString()
+            val lengthData = responseData.length
+
+
+           // RecyclerViewMatchers.checkRecyclerViewItem(R.id.recyclerView,1, matches())
+           // onView().check()
+
         }
 
         server.close()

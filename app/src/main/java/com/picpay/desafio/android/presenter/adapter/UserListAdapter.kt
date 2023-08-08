@@ -1,9 +1,13 @@
-package com.picpay.desafio.android
+package com.picpay.desafio.android.presenter.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.picpay.desafio.android.R
+import com.picpay.desafio.android.data.UserListDiffCallback
+import com.picpay.desafio.android.data.model.User
+import com.picpay.desafio.android.presenter.viewholder.UserListItemViewHolder
 
 class UserListAdapter : RecyclerView.Adapter<UserListItemViewHolder>() {
 
@@ -18,6 +22,8 @@ class UserListAdapter : RecyclerView.Adapter<UserListItemViewHolder>() {
             result.dispatchUpdatesTo(this)
             field = value
         }
+
+    private val scrollStates = hashMapOf<String, Int>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserListItemViewHolder {
         val view = LayoutInflater.from(parent.context)
