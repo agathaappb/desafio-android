@@ -1,0 +1,17 @@
+Index: .idea/jarRepositories.xml
+===================================================================
+diff --git a/.idea/jarRepositories.xml b/.idea/jarRepositories.xml
+--- a/.idea/jarRepositories.xml	
++++ b/.idea/jarRepositories.xml	
+@@ -21,5 +21,10 @@
+       <option name="name" value="Google" />
+       <option name="url" value="https://dl.google.com/dl/android/maven2/" />
+     </remote-repository>
++    <remote-repository>
++      <option name="id" value="MavenRepo" />
++      <option name="name" value="MavenRepo" />
++      <option name="url" value="https://repo.maven.apache.org/maven2/" />
++    </remote-repository>
+   </component>
+ </project>
+\ No newline at end of file
