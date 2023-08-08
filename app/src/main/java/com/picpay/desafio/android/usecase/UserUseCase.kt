@@ -26,7 +26,7 @@ class UserUseCase @Inject constructor(
             if (cache.isEmpty()){
                 return@withContext remoteDataUser()
             }else{
-                return@withContext localDataUser()
+                return@withContext cache
             }
         }
     }

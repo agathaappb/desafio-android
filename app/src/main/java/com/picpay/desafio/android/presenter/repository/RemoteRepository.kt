@@ -13,7 +13,7 @@ class RemoteRepository @Inject constructor(
 
     suspend fun getListUser(): List<User>{
         return withContext(dispatcher.IO) {
-            val callService = service.getUserCorroutine()
+            val callService = service.getUser()
             callService
         }
     }
