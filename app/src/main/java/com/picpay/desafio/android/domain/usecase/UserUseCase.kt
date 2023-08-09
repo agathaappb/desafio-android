@@ -1,9 +1,9 @@
-package com.picpay.desafio.android.usecase
+package com.picpay.desafio.android.domain.usecase
 
 import com.picpay.desafio.android.data.ConverterObject
 import com.picpay.desafio.android.data.model.User
-import com.picpay.desafio.android.presenter.repository.LocalRepository
-import com.picpay.desafio.android.presenter.repository.RemoteRepository
+import com.picpay.desafio.android.domain.repository.LocalRepository
+import com.picpay.desafio.android.domain.repository.RemoteRepository
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent

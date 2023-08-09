@@ -1,4 +1,4 @@
-package com.picpay.desafio.android.presenter.repository
+package com.picpay.desafio.android.domain.repository
 
 import com.picpay.desafio.android.data.ConverterObject
 import com.picpay.desafio.android.data.dao.UserDao

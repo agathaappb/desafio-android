@@ -3,8 +3,9 @@ package com.picpay.desafio.android.usecase
 import com.nhaarman.mockitokotlin2.mock
 import com.picpay.desafio.android.data.entities.UsersLocal
 import com.picpay.desafio.android.data.model.User
-import com.picpay.desafio.android.presenter.repository.LocalRepository
-import com.picpay.desafio.android.presenter.repository.RemoteRepository
+import com.picpay.desafio.android.domain.usecase.UserUseCase
+import com.picpay.desafio.android.domain.repository.LocalRepository
+import com.picpay.desafio.android.domain.repository.RemoteRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest

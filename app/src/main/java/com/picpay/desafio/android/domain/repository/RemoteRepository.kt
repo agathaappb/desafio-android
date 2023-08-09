@@ -1,4 +1,4 @@
-package com.picpay.desafio.android.presenter.repository
+package com.picpay.desafio.android.domain.repository
 
 import android.util.Log
 import com.picpay.desafio.android.data.model.User

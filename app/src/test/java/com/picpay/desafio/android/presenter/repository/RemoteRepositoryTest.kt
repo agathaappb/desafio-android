@@ -3,6 +3,7 @@ package com.picpay.desafio.android.presenter.repository
 import com.nhaarman.mockitokotlin2.mock
 import com.picpay.desafio.android.data.model.User
 import com.picpay.desafio.android.data.service.PicPayService
+import com.picpay.desafio.android.domain.repository.RemoteRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest

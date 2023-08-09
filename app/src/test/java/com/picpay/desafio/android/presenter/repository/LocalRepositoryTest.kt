@@ -7,6 +7,7 @@ import com.picpay.desafio.android.data.ConverterObject
 import com.picpay.desafio.android.data.dao.UserDao
 import com.picpay.desafio.android.data.entities.UsersLocal
 import com.picpay.desafio.android.data.model.User
+import com.picpay.desafio.android.domain.repository.LocalRepository
 import org.junit.Assert.*
 
 import org.junit.Test
